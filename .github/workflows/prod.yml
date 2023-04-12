@@ -13,10 +13,10 @@ jobs:
     name: BuildAndDeployApp
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Check out code
         uses: actions/checkout@v2
     
-      - name: BuildAndPushToDocker image
+      - name: Build and push docker image
         uses: docker/build-push-action@v1
         with:
           username: ${{secrets.DOCKER_USERNAME}}
